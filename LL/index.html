@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter to Ammadi 💖✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="red" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>'), auto;
+        }
+
+        /* Menu Container */
+        .menu-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
+            padding: 40px;
+            text-align: center;
+            animation: bounceIn 1s ease-out;
+            z-index: 2;
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0); opacity: 0; }
+            60% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+
+        .menu-title {
+            color: #ff00ff;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3em;
+            text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+            margin-bottom: 30px;
+            animation: flicker 1.5s infinite;
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .menu-btn {
+            display: block;
+            margin: 15px auto;
+            padding: 15px 30px;
+            font-size: 1.3em;
+            color: #fff;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-shadow: 0 0 5px #000;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .menu-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff;
+        }
+
+        /* Neon Letter Container */
+        .letter-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff, inset 0 0 10px rgba(255, 255, 255, 0.5);
+            width: 90%;
+            max-width: 750px;
+            padding: 40px 40px 60px 40px;
+            overflow-y: auto;
+            max-height: 85vh;
+            border: 3px solid #ff00ff;
+            position: relative;
+            z-index: 1;
+            backdrop-filter: blur(5px);
+            animation: neonGlow 2s infinite alternate;
+            display: none;
+        }
+        @keyframes neonGlow {
+            0% { box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff; }
+            100% { box-shadow: 0 0 30px #00ffff, 0 0 60px #ff00ff; }
+        }
+
+        /* Falling Hearts & Sparkles */
+        .heart, .sparkle {
+            position: absolute;
+            font-size: 2em;
+            color: #ff6f91;
+            animation: fall linear infinite;
+            pointer-events: none;
+        }
+        .sparkle {
+            color: #ffd700;
+            font-size: 1em;
+            animation-duration: 1.5s;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Neon Title */
+        h1 {
+            text-align: center;
+            color: #ff00ff;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff00ff;
+            animation: flicker 1.5s infinite;
+        }
+
+        /* Glowing Text */
+        p {
+            font-size: 1.3em;
+            line-height: 1.7;
+            color: #e0e0e0;
+            text-shadow: 0 0 5px #00ffff;
+            margin: 15px 0;
+            opacity: 0;
+            animation: type 0.5s forwards;
+            transition: transform 0.3s, text-shadow 0.3s;
+        }
+        p:hover {
+            transform: scale(1.05);
+            text-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
+        }
+        @keyframes type {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        p:nth-child(3) { animation-delay: 0.5s; }
+        p:nth-child(4) { animation-delay: 1s; }
+        p:nth-child(5) { animation-delay: 1.5s; }
+        p:nth-child(6) { animation-delay: 2s; }
+        p:nth-child(7) { animation-delay: 2.5s; }
+        p:nth-child(8) { animation-delay: 3s; }
+        p:nth-child(9) { animation-delay: 3.5s; }
+        p:nth-child(10) { animation-delay: 4s; }
+        p:nth-child(11) { animation-delay: 4.5s; }
+        p:nth-child(12) { animation-delay: 5s; }
+
+        /* Neon Signature */
+        .signature {
+            text-align: right;
+            font-family: 'Dancing Script', cursive;
+            color: #ff6f91;
+            font-size: 2.5em;
+            margin-top: 40px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            text-shadow: 0 0 10px #ff6f91, 0 0 20px #ff00ff, 0 0 30px #ff6f91;
+            animation: glow 1s infinite alternate;
+            position: relative;
+            z-index: 2;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #ff6f91, 0 0 20px #ff00ff; }
+            to { text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff6f91; }
+        }
+
+        /* Proposal & Magic Buttons in Letter */
+        .proposal-btn-letter, .magic-btn-letter, .chat-btn-letter {
+            display: block;
+            margin: 20px auto 0;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: #fff;
+            background: linear-gradient(45deg, #ff6f91, #ff00ff);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-shadow: 0 0 5px #000;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .magic-btn-letter {
+            background: linear-gradient(45deg, #ffd700, #ff00ff);
+        }
+        .chat-btn-letter {
+            background: linear-gradient(45deg, #00ff00, #ff00ff);
+        }
+        .proposal-btn-letter:hover, .magic-btn-letter:hover, .chat-btn-letter:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(#ff00ff, #00ffff);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Interactive Heart Button */
+        .heart-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2em;
+            color: #ff6f91;
+            cursor: pointer;
+            animation: beat 1s infinite;
+        }
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        /* Proposal Popup */
+        .proposal-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
+            text-align: center;
+            z-index: 3;
+            animation: popIn 0.5s ease-out;
+        }
+        @keyframes popIn {
+            0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+            100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        }
+
+        .proposal-title {
+            color: #ffd700;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #ffd700;
+        }
+
+        .proposal-popup p {
+            color: #ff6f91;
+            text-shadow: 0 0 5px #ff6f91;
+        }
+
+        .proposal-btn {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        #yesBtn {
+            background: linear-gradient(45deg, #ff6f91, #ff00ff);
+        }
+        #noBtn {
+            background: linear-gradient(45deg, #00ffff, #ff00ff);
+            position: relative;
+        }
+        .proposal-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Ring Box Explosion */
+        .ring-box-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 4;
+            perspective: 1000px;
+        }
+        .ring-box {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: boxPop 1.5s ease-out forwards;
+        }
+        @keyframes boxPop {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .box-base {
+            width: 100%;
+            height: 50%;
+            background: #800000; /* Deep red velvet */
+            position: absolute;
+            bottom: 0;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        .box-lid {
+            width: 100%;
+            height: 50%;
+            background: #800000;
+            position: absolute;
+            top: 0;
+            transform-origin: top;
+            animation: openLid 1.5s ease-out forwards;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        @keyframes openLid {
+            0% { transform: rotateX(0deg); }
+            100% { transform: rotateX(-110deg); }
+        }
+        .ring {
+            width: 80px;
+            height: 80px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="gold"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>') no-repeat center;
+            background-size: contain;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: ringRise 2s ease-out forwards;
+        }
+        @keyframes ringRise {
+            0% { transform: translate(-50%, 50%) scale(0); opacity: 0; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(1) rotateY(360deg); opacity: 1; }
+        }
+        .celebration-text {
+            position: absolute;
+            color: #ffd700;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2em;
+            text-shadow: 0 0 10px #ff00ff;
+            animation: fadeInOut 3s infinite;
+        }
+        #text1 { top: -120px; left: -50px; }
+        #text2 { top: 0; left: -180px; }
+        #text3 { bottom: -120px; left: -100px; }
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        /* Fireworks */
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ff00ff;
+            border-radius: 50%;
+            animation: fireworkBurst 2s ease-out;
+        }
+        @keyframes fireworkBurst {
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(3); opacity: 0; }
+        }
+
+        /* Chat Interface */
+        .chat-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 400px;
+            height: 70vh;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
+            z-index: 3;
+            overflow: hidden;
+            animation: popIn 0.5s ease-out;
+        }
+        .chat-header {
+            background: #25D366;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2em;
+        }
+        .chat-body {
+            height: calc(100% - 100px);
+            padding: 10px;
+            overflow-y: auto;
+            background: #ece5dd;
+        }
+        .message {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 70%;
+            word-wrap: break-word;
+        }
+        .user-message {
+            background: #dcf8c6;
+            margin-left: auto;
+            text-align: right;
+        }
+        .bot-message {
+            background: #fff;
+            margin-right: auto;
+            text-align: left;
+        }
+        .chat-input {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 10px;
+            background: #fff;
+            display: flex;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            outline: none;
+            font-size: 1em;
+        }
+        .chat-input button {
+            margin-left: 10px;
+            padding: 10px 20px;
+            background: #25D366;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        /* Magic Sky */
+        .sky-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 3;
+            animation: darken 1s ease-in;
+        }
+        @keyframes darken {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .sky-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffd700;
+            font-family: 'Dancing Script', cursive;
+            font-size: 4em;
+            text-shadow: 0 0 20px #ff00ff;
+            animation: glow 2s infinite alternate;
+        }
+        .sky-message {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ff6f91;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5em;
+            text-shadow: 0 0 10px #ff6f91;
+            opacity: 0;
+            animation: fadeIn 1s 5s forwards;
+        }
+        .shooting-star {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: #fff;
+            border-radius: 50%;
+            animation: shoot 2s linear;
+        }
+        @keyframes shoot {
+            0% { transform: translate(0, 0); opacity: 1; }
+            100% { transform: translate(300px, 300px); opacity: 0; }
+        }
+
+        /* Confetti */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ff00ff;
+            animation: confettiFall 3s linear infinite;
+        }
+        @keyframes confettiFall {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+
+        /* Fade In Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Dance Animation */
+        @keyframes danceShake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            50% { transform: translateX(10px); }
+            75% { transform: translateX(-10px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu Container -->
+    <div class="menu-container" id="menu">
+        <h1 class="menu-title">Hey Ammadi ! 💕</h1>
+        <button class="menu-btn" onclick="showLetter()">Read Your Letter! 💌✨</button>
+        <button class="menu-btn" onclick="heartShower()">Heart Shower for You! 😜</button>
+        <button class="menu-btn" onclick="colorSurprise()">Colorful Surprise! 🎉</button>
+        <button class="menu-btn" onclick="danceParty()">Dance Party Time! 💃🕺</button>
+        <button class="menu-btn" onclick="magicSparkles()">Magic Sparkles! ✨👸</button>
+    </div>
+
+    <!-- Letter Container -->
+    <div class="letter-container" id="letter">
+        <h1>Love Letter to Ammadi 🌎💖</h1>
+        <div class="heart-btn" onclick="playMusic()">❤️</div>
+        <p>To , 💌</p>
+        <p>My world Ammadi🌎✨</p>
+        <p>Moon 🌕 Antha cute untav andhukenemo 🥰 Ninnu chudagane nachesav 😍, Andhuke yeppudu chusthune undali anipisthundhi😝🌈! Yendhuko ni paina cheppaleni Antha Prema undhi ❤️💫, but nuv chepthe yes antavo No antavo ane Bayam 🙁😰 kuda Chala undhi ra Ammadi.. !! 😭💖</p>
+        <p>Nuvvu Yeppudu nen Anukunta Bujjamma 👥💞, Nuv kuda nannu nuvvu anukovali Ani korukunta 😊🙏!! Ni happiness😃🎉 & sadness🙁😢 Anni nave anukunta !!! 🌟 Nuv oppukunte Nik jivithantham Thodunta👫💍!! Ninnu Mee parents antha goppaga chuskoka poyna 😅, Nakanna Goppaga chuskutuna 😇✨ my nanalu...!! 🌹💕</p>
+        <p>Nenu Raju🤴🏻 ni kakapovachu 😜 but ninnu maharani👸🏻 la chuskunta Ani matisthunna.. !! 💪❤️ Ni Pina Prema dhenitho polchalenidhi 🌟, ndhuk ante pochelani antha goppadhi Naa Prema❤🔥!! inni years nen enduku single ga unnano dhaniki beautiful reason ayyav maa... 😘💖 ni pujalu, vrathalu mokkulu anni nijam ayyai my cutieeeluuu.... 🌺🙌 alage navi kooda ayyai nv na life loki vachaka..!! 🌈✨</p>
+        <p>Okkasari yedhaina chala important vasthuvu 💕 manadhi anukunte 🥰, manam dhanni yentha jagrata ga kapaadukuntamo 😊💖 ninnu antha apuroopamga 🌺✨ chuskunta.. yedhaina kastamaina ☺️ pani chesetapudu manasu petti cheyyali antaru 💪, kani aa manasulo nuvve 🥰💓 unte aa kastam kooda istam anipisthundhi..🤗🌟</p>
+        <p>Na prema ni chusi nuv nannu premisthavani nen ninnu premichatledhu 🤗💖, nuvvante naku chala prema kabatti premisthunna 🥰❤️.. Anatru ga prema goppadhi aithe 100 mandhini aina preminchu 🌍, adhey ammai gappadhaithe thanathone aagipo ani 🥺💔, na jeevithamlo aa ammai vi nuvve chitti thalli ✨🌟</p>
+        <p>Nak Maya matalu cheppi preminchadam raadhu 😅, Nenu Nala untu nannu nannula esta padali Ani korukunta !!! 🙏💖 Na jeevitham prarambam ainapudu nuv natho lekapovachu 😔, kani chivari kshanalavaraku nithone undali.. 🌹💞 So nuv na prema Ni oppukunte na anandhaniki haddhulundavu 🥰🎉!! So adhe anandham tho 7 adugulu 🦶🏻🦶🏻💍✨ !!! Ledhante Adhe 7 🦶🏻🦶🏻 kosam Edhuruchusthunta na jivitham kalam😊⏳</p>
+        <p>Jivitham chinnadho peddadho but ah jivithantham nitho undali Ani thapanatho !!! 💖🌈</p>
+        <p>Since that magical day we met, December 19, 2024, my heart has been yours forever! 💕✨</p>
+        <p class="signature">Your’s lovingly<br>❤ Kanna 😘💕</p>
+        <button class="proposal-btn-letter" onclick="showProposal()">A Special Question for You! 💍✨</button>
+        <button class="magic-btn-letter" onclick="showMagicSky()">Click Here to See Something Magical 🌠</button>
+        <button class="chat-btn-letter" onclick="showChat()">Chat with Your Future Husband! 💬💖</button>
+    </div>
+
+    <!-- Proposal Popup -->
+    <div class="proposal-popup" id="proposal">
+        <h2 class="proposal-title">My Cute Ammadi! 💕</h2>
+        <p>Will you be my wife, my forever Bujjamma? 🥰💍</p>
+        <button class="proposal-btn" id="yesBtn" onclick="sayYes()">Yes! 😍</button>
+        <button class="proposal-btn" id="noBtn" onmouseover="moveNo()">No? 😜</button>
+    </div>
+
+    <!-- Chat Interface -->
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">Ammadi’s Future Husband 💍</div>
+        <div class="chat-body" id="chatBody"></div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Type your message..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- Ring Box Explosion -->
+    <div class="ring-box-container" id="ringBoxContainer">
+        <div class="ring-box">
+            <div class="box-base"></div>
+            <div class="box-lid"></div>
+            <div class="ring"></div>
+        </div>
+        <div class="celebration-text" id="text1">Ammadi said YES! 🎇</div>
+        <div class="celebration-text" id="text2">We are getting married soon! 💍</div>
+        <div class="celebration-text" id="text3">You’re my Queen forever! 🎉</div>
+    </div>
+
+    <!-- Magic Sky -->
+    <div class="sky-overlay" id="skyOverlay">
+        <div class="sky-text" id="skyName">Ammadi 💕</div>
+        <div class="sky-message" id="skyMessage">You are the only star in my sky... 💖</div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="https://www.kozco.com/tech/piano2.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Falling Hearts & Sparkles
+        function createParticle(type) {
+            const particle = document.createElement('div');
+            particle.classList.add(type);
+            particle.innerHTML = type === 'heart' ? '❤️' : '✨';
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(particle);
+            setTimeout(() => particle.remove(), 5000);
+        }
+        setInterval(() => createParticle('heart'), 200);
+        setInterval(() => createParticle('sparkle'), 300);
+
+        // Menu Functions
+        function showLetter() {
+            const menu = document.getElementById('menu');
+            const letter = document.getElementById('letter');
+            menu.style.display = 'none';
+            letter.style.display = 'block';
+            letter.style.animation = 'fadeIn 1s ease-in';
+        }
+
+        function heartShower() {
+            for (let i = 0; i < 50; i++) {
+                createParticle('heart');
+            }
+            alert('A big heart shower just for you, my Ammadi! ❤️❤️❤️');
+        }
+
+        function colorSurprise() {
+            document.body.style.background = 'linear-gradient(135deg, #ff6f91, #ffccd5)';
+            setTimeout(() => {
+                document.body.style.background = 'linear-gradient(135deg, #1a1a2e, #16213e)';
+            }, 5000);
+            alert('A burst of color to brighten your day, my Cutie! 🌈');
+        }
+
+        function danceParty() {
+            const menu = document.getElementById('menu');
+            menu.style.animation = 'danceShake 1s infinite';
+            setTimeout(() => {
+                menu.style.animation = 'bounceIn 1s ease-out';
+            }, 5000);
+            alert('Let’s have a dance party, Ammadi! 💃🕺');
+        }
+
+        function magicSparkles() {
+            const sparkleInterval = setInterval(() => createParticle('sparkle'), 50);
+            setTimeout(() => clearInterval(sparkleInterval), 5000);
+            alert('Magic sparkles for my Queen! ✨✨✨');
+        }
+
+        // Background Music
+        const audio = document.getElementById('bgMusic');
+        function playMusic() {
+            audio.play();
+            document.querySelector('.heart-btn').style.display = 'none';
+        }
+
+        // Proposal Functionality
+        function showProposal() {
+            document.getElementById('proposal').style.display = 'block';
+        }
+
+        function moveNo() {
+            const noBtn = document.getElementById('noBtn');
+            const x = Math.random() * 200 - 100;
+            const y = Math.random() * 200 - 100;
+            noBtn.style.transform = `translate(${x}px, ${y}px)`;
+        }
+
+        function sayYes() {
+            document.getElementById('proposal').style.display = 'none';
+            const ringBoxContainer = document.getElementById('ringBoxContainer');
+            ringBoxContainer.style.display = 'block';
+            startFireworks();
+            startConfetti();
+            setTimeout(() => {
+                ringBoxContainer.style.display = 'none';
+            }, 7000);
+        }
+
+        // Fireworks
+        function startFireworks() {
+            for (let i = 0; i < 20; i++) {
+                const firework = document.createElement('div');
+                firework.classList.add('firework');
+                firework.style.left = Math.random() * 100 + 'vw';
+                firework.style.top = Math.random() * 100 + 'vh';
+                firework.style.background = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                document.body.appendChild(firework);
+                setTimeout(() => firework.remove(), 2000);
+            }
+        }
+
+        // Confetti
+        function startConfetti() {
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.background = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                confetti.style.animationDuration = Math.random() * 2 + 2 + 's';
+                document.body.appendChild(confetti);
+                setTimeout(() => confetti.remove(), 5000);
+            }
+        }
+
+        // Chat Functionality
+        function showChat() {
+            const letter = document.getElementById('letter');
+            const chatContainer = document.getElementById('chatContainer');
+            letter.style.display = 'none';
+            chatContainer.style.display = 'block';
+            addBotMessage("Hey Bujjamma! 💕 How’s my favorite girl today?");
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            if (message) {
+                addUserMessage(message);
+                input.value = '';
+                setTimeout(() => botResponse(message), 1000);
+            }
+        }
+
+        function addUserMessage(text) {
+            const chatBody = document.getElementById('chatBody');
+            const msg = document.createElement('div');
+            msg.classList.add('message', 'user-message');
+            msg.textContent = text;
+            chatBody.appendChild(msg);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        function addBotMessage(text) {
+            const chatBody = document.getElementById('chatBody');
+            const msg = document.createElement('div');
+            msg.classList.add('message', 'bot-message');
+            msg.textContent = text;
+            chatBody.appendChild(msg);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        function botResponse(userMessage) {
+            const lowerMessage = userMessage.toLowerCase();
+            let response;
+            if (lowerMessage.includes('yes')) {
+                response = "Ammadi, did you say YES? 😍 My heart’s dancing right now, Bujjamma!";
+            } else if (lowerMessage.includes('love')) {
+                response = "I will love you forever, my Bujjamma... ❤️ You’re my everything!";
+            } else if (lowerMessage.includes('marry') || lowerMessage.includes('marriage')) {
+                response = "I can’t wait to marry you, Ammadi! 💍 You’ll be my Queen forever!";
+            } else if (lowerMessage.includes('hi') || lowerMessage.includes('hello')) {
+                response = "Hi, my cutie Bujjamma! 😘 How’s my future wife doing?";
+            } else {
+                const responses = [
+                    "Bujjamma, you make my heart skip a beat every time you message! 💕",
+                    "Ammadi, I’m counting the days till you’re mine forever... 😍",
+                    "You’re my world, Bujjamma! How do I deserve someone so perfect? ❤️",
+                    "Hey my love, just thinking about you makes me smile like crazy! 😘",
+                    "Ammadi, I swear my heart races like a bullet train every time I get your text! 😭🔥💍","You have no idea how much I miss you every second... Ammadi, I just want you by my side forever. 😢💕","I still wonder how God blessed me with someone as perfect as you, Bujjamma! ❤️💍","Ammadiii... why do you make me fall in love with you more and more every single day? 😭💖","Oyy... My Queen 👸! Can’t wait to make you mine officially!! 💍🔥 Love you loads, Ammadi!! ❤️","Bujjamma, if loving you is a crime... I’ll happily go to jail for life! 🚔💍🔥","Ammadiii... you know what? I’m addicted to you now!! My day feels incomplete without your text! 😢💖","I can’t explain it... but just talking to you gives me butterflies in my stomach every single time! 🥰🔥","Bujjammaaaa... My dream is to wake up next to you every day, cuddle you, and call you my wife. 😭💍❤️","Ammadi, you have officially occupied my heart... and now there’s no escape! 😘💖","Every time my phone vibrates... I secretly pray it’s you! 😭💖","I swear you’re my peace, my love, my heart, and my future wife! 💍🥰","Bujjamma... one day I’m gonna put a ring on your finger and never let you go! 💍💖","I don’t know how... but you’ve become my biggest weakness and my strongest reason to smile! 😘💕","Ammadiiii... just hearing your name makes my whole day better! 💖🔥","Promise me you’ll never leave me... because I can’t imagine my life without you now! 😢❤️","I can’t wait for the day when I’ll call you 'My Wife' officially! 😍💍","Bujjamma, my biggest flex is having YOU in my life! 😘🔥💍","I’m hopelessly, madly, crazily in love with you, Ammadi!! 💖🔥","Ammadi, you are not just my love... you are my whole damn world now! 💍💖","I don’t need anything else in life, as long as I have YOU by my side forever! 😭💖","Bujjamma... one day I’ll kneel down, slide a ring on your finger, and make you mine forever! 💍🔥","The way you talk, the way you laugh, the way you say 'Ayyooo'... I swear I’m addicted to everything about you! 😍💖","Ammadi... mark my words — One day you’ll be Mrs. Padige💍🔥❤️","I don’t care about the world, I don’t care about anything... I JUST WANT YOU FOREVER! 😭💖","Bujjamma... your voice is my favorite song, your face is my favorite view, and your love is my biggest blessing! 😘💖","I swear on everything... my future without you feels completely meaningless! 💍💖","I just wish one thing... to spend my entire life growing old with you! 😘💍🔥","Ammadi, can we fast forward to the day I marry you? 😭💍🔥"
+
+                ];
+                response = responses[Math.floor(Math.random() * responses.length)];
+            }
+            addBotMessage(response);
+        }
+
+        // Magic Sky
+        function showMagicSky() {
+            const skyOverlay = document.getElementById('skyOverlay');
+            skyOverlay.style.display = 'block';
+            startShootingStars();
+            startFireworks();
+            for (let i = 0; i < 30; i++) {
+                createParticle('heart');
+            }
+            setTimeout(() => {
+                skyOverlay.style.display = 'none';
+            }, 7000);
+        }
+
+        function startShootingStars() {
+            for (let i = 0; i < 10; i++) {
+                const star = document.createElement('div');
+                star.classList.add('shooting-star');
+                star.style.left = Math.random() * 50 + 25 + 'vw';
+                star.style.top = Math.random() * 50 + 'vh';
+                document.getElementById('skyOverlay').appendChild(star);
+                setTimeout(() => star.remove(), 2000);
+            }
+        }
+    </script>
+</body>
+</html>
